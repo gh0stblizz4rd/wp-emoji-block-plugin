@@ -5,9 +5,10 @@
 	"version": "0.1.0",
 	"title": "Emoji Block",
 	"category": "widgets",
-	"icon": "smiley",
-	"description": "Example block scaffolded with Create Block tool.",
+	"icon": "buddicons-activity",
+	"description": "Block that displays users chosen emoji on the frontend of the site",
 	"example": {},
+	"attributes": {"emoji": {"type": "string", "default": "😊"}},
 	"supports": {
 		"html": false
 	},
