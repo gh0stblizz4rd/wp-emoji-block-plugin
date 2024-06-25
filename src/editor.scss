@@ -1,15 +1,21 @@
+// .wp-block-create-block-emoji-block {
+// 	width: fit-content;
+// }
+
 .emoji-selector {
 	display: flex;
+	align-items: center;
 	gap: 15px;
 }
 
 .selected-emoji {
 	margin: 0;
-	font-size: 100px;
+	font-size: 120px;
 }
 
 .emoji-edit-buttons-wrapper {
-	flex-grow: 1;
+	// padding: 25px;
+	// flex-grow: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -43,4 +49,8 @@
 
 .emoji-edit-buttons:nth-child(2):hover {
 	background: none
+}
+
+.emoji-picker-window {
+	width: 100% !important;
 }
