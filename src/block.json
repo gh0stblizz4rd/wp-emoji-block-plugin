@@ -8,7 +8,7 @@
 	"icon": "buddicons-activity",
 	"description": "Block that displays users chosen emoji on the frontend of the site",
 	"example": {},
-	"attributes": {"emoji": {"type": "string", "default": "😊"}},
+	"attributes": {"emoji": {"type": "string", "default": "😊"}, "alignment" : {"type": "string", "default": "left"}},
 	"supports": {
 		"html": false
 	},

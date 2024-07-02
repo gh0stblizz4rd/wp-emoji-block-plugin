@@ -6,6 +6,9 @@
 	display: flex;
 	align-items: center;
 	gap: 20px;
+	border: rgb(0, 0, 0) 1px solid;
+	border-radius: 3px;
+	padding: 0 15px;
 }
 
 .selected-emoji {
@@ -34,21 +37,21 @@
 }
 
 .emoji-edit-buttons:nth-child(1) {
-	border: 2px solid rgb(6, 231, 6);
-	background-color: rgb(6, 231, 6);
+	border: 2px solid #bee42f;
+	background-color: transparent;
 }
 
 .emoji-edit-buttons:nth-child(1):hover {
-	background: none
+	background-color: #bee42f;
 }
 
 .emoji-edit-buttons:nth-child(2) {
-	border: 2px solid rgb(245, 3, 3);
-	background-color: rgb(245, 3, 3);
+	border: 2px solid #ed563c;
+	background-color: transparent;
 }
 
 .emoji-edit-buttons:nth-child(2):hover {
-	background: none
+	background-color: #ed563c;
 }
 
 .emoji-picker-window {

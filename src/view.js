@@ -9,6 +9,13 @@ document.querySelectorAll(".emoji-block-wrapper").forEach((blockWrapper) => {
 	blockRoot.render(<EmojiBlock {...blockData} />);
 });
 
-function EmojiBlock(props) {
-	return <div className="some">{props.emoji}</div>;
+function EmojiBlock(attributes) {
+	return (
+		<div
+			className="emoji-block-frontend"
+			style={{ textAlign: attributes.alignment }}
+		>
+			{attributes.emoji}
+		</div>
+	);
 }
