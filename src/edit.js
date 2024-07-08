@@ -2,13 +2,19 @@ import {
 	useBlockProps,
 	BlockControls,
 	AlignmentToolbar,
+	BlockToolbar,
 } from "@wordpress/block-editor";
+import { ToolbarGroup, ToolbarButton } from "@wordpress/components";
 import { useState } from "react";
 import EmojiPicker from "emoji-picker-react";
 import "./editor.scss";
 
 export default function Edit(props) {
 	const [emojiPickerActive, setEmojiPickerActive] = useState(false);
+
+	function toggleState(currentState, updateState) {
+		updateState((currentState) => !currentState);
+	}
 
 	return (
 		<div {...useBlockProps()}>
@@ -19,35 +25,16 @@ export default function Edit(props) {
 						props.setAttributes({ alignment: newAligment })
 					}
 				></AlignmentToolbar>
+				<ToolbarGroup>
+					<ToolbarButton
+						icon="buddicons-activity"
+						label="Choose Emoji"
+						onClick={() => {
+							toggleState(emojiPickerActive, setEmojiPickerActive);
+						}}
+					/>
+				</ToolbarGroup>
 			</BlockControls>
-			<div
-				className="emoji-selector"
-				style={{ justifyContent: props.attributes.alignment }}
-			>
-				<div className="selected-emoji">{props.attributes.emoji}</div>
-				<div className="emoji-edit-buttons-wrapper">
-					<button
-						className="choose-emoji emoji-edit-buttons"
-						onClick={() => {
-							if (emojiPickerActive) {
-								setEmojiPickerActive(false);
-							} else {
-								setEmojiPickerActive(true);
-							}
-						}}
-					>
-						Choose emoji
-					</button>
-					<button
-						className="remove-emoji emoji-edit-buttons"
-						onClick={() => {
-							props.setAttributes({ emoji: "😊" });
-						}}
-					>
-						Remove chosen
-					</button>
-				</div>
-			</div>
 			{emojiPickerActive ? (
 				<EmojiPicker
 					className="emoji-picker-window"
@@ -59,6 +46,12 @@ export default function Edit(props) {
 			) : (
 				""
 			)}
+			<div
+				className="emoji-selector"
+				style={{ justifyContent: props.attributes.alignment }}
+			>
+				<div className="selected-emoji">{props.attributes.emoji}</div>
+			</div>
 		</div>
 	);
 }
