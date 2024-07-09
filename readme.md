@@ -36,7 +36,7 @@ A simple Wordpress [Gutenberg editor](https://wordpress.org/gutenberg/) block us
     <img width="750" src="https://i.imgur.com/jBli67r.png" >
 </p>
 
-3. Select the ziped file of the plugin and click Install Now.
+3. Select the [ziped file](https://github.com/gh0stblizz4rd/wp-emoji-block-plugin/raw/main/emoji-block.zip) of the plugin and click Install Now.
 <p>
     <img width="750" src="https://i.imgur.com/ybyLrV2.png" >
 </p>
