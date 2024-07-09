@@ -1,13 +1,14 @@
 {
 	"name": "emoji-block",
-	"version": "0.1.0",
-	"description": "Example block scaffolded with Create Block tool.",
-	"author": "The WordPress Contributors",
-	"license": "GPL-2.0-or-later",
+	"version": "1.0",
+	"description": "Block used to display users chosen emoji on the frontend of the site",
+	"author": "gh0stblizz4rd",
+	"license": "GPL-2.0",
 	"main": "build/index.js",
 	"scripts": {
 		"build": "wp-scripts build --webpack-copy-php",
 		"format": "wp-scripts format",
+		"zip": "wp-scripts plugin-zip",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
 		"packages-update": "wp-scripts packages-update",
